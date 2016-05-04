@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+
+	<Resource name="jdbc/OOXX" 
+			  auth="Container"
+			  type="javax.sql.DataSource"
+			  driverClassName="oracle.jdbc.OracleDriver"
+			  url="jdbc:oracle:thin:@tvCOMB11gDB.cminl.oa:1521:tcomb11g"
+			  username="OEPRD"
+			  password="toeprd"
+			  maxActive="80"
+			  maxIdle="30" 
+			  maxWait="30000"
+			  removeAbandoned="true"
+			  testOnBorrow="true"
+			  validationQuery="select 1 from dual" />
+
+
+
+</Context>

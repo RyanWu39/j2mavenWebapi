@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="indexdb">
+<head>
+<meta charset="utf8">
+<title>Demo</title>
+
+<style>
+table, th , td {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+<script type="text/javascript" src="../js/indexedDbHelper.js"></script>
+<script type="text/javascript" src="../js/demo.js"></script>
+</head>
+<body ng-controller="IndexdbController">
+{{word}}
+<table>
+	<tr>
+		<th ng-repeat="t in header">{{t.text}}</th>
+	</tr>
+	<div ng-include="'templateTest.html'"></div>
+	<tr ng-repeat="r in datasource" ng-include="'tableContent.html'">
+		
+	</tr>
+</table>
+</body>
+</html>
